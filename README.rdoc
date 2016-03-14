@@ -34,3 +34,14 @@ in the about.html.erb
 
 
 ** Step 5: Layout
+
+    a. Adding style: In the gemfile
+    gem 'rails',                '4.2.2'
+    gem 'bootstrap-sass',       '3.2.0.0'
+
+    b. add the file custom.css.scss
+    c. In that file, at the top
+    @import "bootstrap-sprockets";
+    @import "bootstrap";
+
+    d.

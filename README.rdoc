@@ -1,28 +1,36 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Step 4: using helper method
+in the application hepler.rb
 
-Things you may want to cover:
+ ```
+ def full_title(page_title = " ")
+     base_title = "Ruby on Rails Tutorial Sample App"
+     if page_title.empty?
+       base_title
+     else
+       page_title + " | "+ base_title
+     end
+   end
 
-* Ruby version
+   def demo_helper_app_helper_file
+    name = "Md. Mahmudur Rahman"
+   end
 
-* System dependencies
+ ```
+in the application.html.erb
 
-* Configuration
+   ```
+   <title><%= full_title(yield(:title)) %> | Ruby on Rails Tutorial Sample App</title>
 
-* Database creation
+   ```
 
-* Database initialization
+in the about.html.erb
 
-* How to run the test suite
+  ```
+  <h5><%= demo_helper_app_helper_file %></h5>
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  ```
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+** Step 5: Layout
